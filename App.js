@@ -11,13 +11,10 @@ import {
   Image
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import { Colors, DebugInstructions, Header, LearnMoreLinks, ReloadInstructions} from 'react-native/Libraries/NewAppScreen';
+
+import IntroductionImage from "./components/IntroductionImage.js";
+import Experience from './components/Experience'
 
 const App = () => {
 
@@ -29,18 +26,13 @@ const App = () => {
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View style={styles.container}>
-        <ScrollView>
-          <View >
-            <Image style={styles.image}  source={require('./Images/photo_darshan.jpg')}  />
-            <Text style={styles.nameTitle}> Hi!! I'am Darshan </Text>
-          </View>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi facilis nemo earum sed aliquid qui distinctio voluptatum illum quia, mollitia libero nihil amet, maiores cumque deserunt debitis, nisi doloremque quas.
-
-          </Text>
-        </ScrollView>
-      </View>
+      <ScrollView style={styles.container}>
+        <IntroductionImage />
+        <Text style={styles.introduction}>
+          I am Darshan. I was born and brought up in Mysore, Karnataka. I have completed my Bachelors in The National Institute of Engineering, Mysore. I am a tech enthusiast. I would also like to spend my free time in gardening.
+        </Text>
+        <Experience />
+      </ScrollView>
     </SafeAreaView>
   )
 }
@@ -50,17 +42,9 @@ const styles = StyleSheet.create({
     display: "flex",
     height: "100%",
   },
-  image: {
-    width: '100%',
-    height: 400,
-    borderRadius: 5
-  },
-  nameTitle: {
-    fontSize:30,
-    margin: '2%',
-    fontFamily: 'Helvetica-Light',
-    
-  },
+  introduction: {
+    padding: 10
+  }
 });
 
 export default App;
