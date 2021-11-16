@@ -4,11 +4,10 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import FlexRow from './FlexRow.js'
 
 export default function SummaryContainer(props) {
-	const l = "../../Images/walmart.jpeg"
   return (
 		<>
 			<FlexRow>
-				<Image style={styles.logo}  source={props.logo}  />
+				<Image style={styles.logo}  source={props.logo}  resizeMode='contain'/>
 				<Text style={styles.containerHeading}>{props.containerHeading}</Text>
 			</FlexRow>
 			<Text style={styles.location}>{props.location}</Text>
@@ -34,6 +33,6 @@ const styles = StyleSheet.create({
 	location: {
 		textTransform: 'uppercase',
 		color: 'grey',
-		marginHorizontal: '2%'
+		marginVertical: '1%'
 	}
 });

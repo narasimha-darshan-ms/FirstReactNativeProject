@@ -15,6 +15,9 @@ import { Colors, DebugInstructions, Header, LearnMoreLinks, ReloadInstructions} 
 
 import IntroductionImage from "./components/IntroductionImage.js";
 import Experience from './components/Experience'
+import Education from './components/Education'
+import Skills from './components/Skills'
+
 
 const App = () => {
 
@@ -32,6 +35,8 @@ const App = () => {
           I am Darshan. I was born and brought up in Mysore, Karnataka. I have completed my Bachelors in The National Institute of Engineering, Mysore. I am a tech enthusiast. I would also like to spend my free time in gardening.
         </Text>
         <Experience />
+        <Education />
+        <Skills />
       </ScrollView>
     </SafeAreaView>
   )
