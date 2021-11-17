@@ -4,9 +4,10 @@ import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import FlexRow from './GenericUIcomponents/FlexRow.js'
 import SummaryContainer from './GenericUIcomponents/SummaryContainer'
 
-export default function Skills() {
-    const skillsImages = [require('../Images/SkillsLogo/Hive.png'), require('../Images/SkillsLogo/Apache_Spark.png'),require('../Images/SkillsLogo/Scala.png'), require('../Images/SkillsLogo/Hadoop.png'),require('../Images/SkillsLogo/React.png'), require('../Images/SkillsLogo/git.png')]
+import { skills_logo } from '../Constants/imageImports'
 
+export default function Skills() {
+    const skills = [skills_logo.HIVE, skills_logo.SPARK, skills_logo.SCALA, skills_logo.HADOOP, skills_logo.REACT, skills_logo.GIT]
 
     return (
         <View style={styles.container}>
@@ -17,7 +18,7 @@ export default function Skills() {
             </FlexRow>
             <ScrollView horizontal={true}>
             {
-                skillsImages.map((element,index) => {
+                skills.map((element,index) => {
                     return (<Image key={index} style={styles.skillImageStyle} source={element} resizeMode='contain'/>)
                 })
             }
